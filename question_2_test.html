@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2 test</title>
+</head>
+<body>
+    <header>
+        <h1>Test: Question 2</h1>
+        <h2>Arnaldo Campos</h2> 
+    </header>
+    <main>
+        <h3>Volume of a round cilinder calculartor</h3>
+        <!-- Input: The user put the raidius and the height of the cilinder-->
+        <label>Enter the radius of the cilinder: <input type="text" id="radius"></label>
+        <label>Enter the height of the cilinder: <input type="text" id="height"></label>
+        <label><button onclick="volume()">calculate volume</button></label>
+        <hr>
+        <p><span id="output"></span></p>
+    </main>
+    <footer>
+        &copy;2021 &bull; Arnaldo Campos &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+</body>
+<script>
+    function volume(){
+        //Process: Transform the input to Float, and then make the calculations
+        let radius = parseFloat(document.getElementById('radius').value);
+        let height = parseFloat(document.getElementById('height').value);
+
+        let volume = 3.14 * radius ** 2 * height; 
+        // Output: The user receive the volume of the cilinder
+        document.getElementById('output').innerHTML = "The volume of the cilinder is " + Math.round(volume);
+    }
+</script>
+</html>

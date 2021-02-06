@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1 test</title>
+</head>
+<body>
+    <header>
+        <h1>Test: Question 1</h1>
+        <h2>Arnaldo Campos</h2> 
+    </header>
+    <main>
+        <h3>After tax pay calculator</h3>
+        <!-- Input: The user put the amount of hours of work he or she wants to calculate-->
+        <label>Enter regular hours of work: <input type="text" id="regular"></label>
+        <label>Enter extra hours of work: <input type="text" id="extra"></label>
+        <label><button onclick="calcpay()">calculate payment</button></label>
+        <hr>
+        <p><span id="output"></span></p>
+    </main>
+    <footer>
+        &copy;2021 &bull; Arnaldo Campos &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+</body>
+<script>
+    function calcpay(){
+        //Process: Transform the input to Float, and then make the calculations
+        let regular = parseFloat(document.getElementById('regular').value);
+        let extra = parseFloat(document.getElementById('extra').value);
+
+        let calcregular = regular * 15;
+        let calcextra = extra * 22.50;
+        let calctotal = calcregular + calcextra * 0.15;
+        // Output: The user receive the correct amount of payment
+        document.getElementById('output').innerHTML = "Your payment is $ " + calctotal.toFixed(2);
+    }
+</script>
+</html>
