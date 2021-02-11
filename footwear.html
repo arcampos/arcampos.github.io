@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--INSTRUCTIONS:
+Write a JS program that helps a user choose the correct footwear for the day's weather.
+The program should give the following options and outputs
+weather / foot wear
+hot / sandals
+rain / galoshes
+snow / boots
+unknown / shoes -->
+<!--REQUIREMENTS
+Use the base template for the class
+Use an external JS file
+Use an HTML select element / combo box to guide the users selection to only the four options
+Be sure to add a default, non-selectable value to your select element
+Use a button click to handle the selection OR you may respond to a valid selection from
+the select element
+validate -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footwear weather selector</title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Week 6: Footwear weather selectors</h1>
+        <h2>Arnaldo Campos</h2>
+    </header>
+    <main>
+        <label for="weather">Choose today weather: </label>
+        <select id="weather">
+         <option value="" selected disabled>--Make a selection--</option>
+         <option value="hot">hot</option>
+         <option value="rain">rain</option>
+         <option value="snow">snow</option>
+         <option value="unknown">unknown</option>
+        </select>
+
+<p></p>
+    </main>
+    <script src="js/weather.js"></script>
+    <footer>
+        &copy;2021 &bull; Arnaldo Campos &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+</header>
+</body>
+</html>

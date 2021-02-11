@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--INSTRUCTIONS:
+Write a JS program to quiz a child on basic arithmetic. The program must allow 
+the user to enter 2 numbers and an arithmetic operator (+, -, *, /) and must allow them to answer
+the problem. The program should compute the correct answer and comapre it to the user's answer and 
+output either "Correct! 🏆" or "Incorrect 😢"  -->
+
+<!-- REQUIREMENTS:
+Use the base template for the class as starting point
+Use an external JS file
+You must use a SWITCH statement in this problem
+Use a button clock to handle event of checking the math to produce one of the two outputs
+Validate-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math calc testr</title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Week 6: Simple calculator</h1>
+        <h2>Arnaldo Campos</h2>
+    </header>
+    <main>
+        <h3>Enter the numbers, and select the arithmetic operator</h3>
+        <label>Enter number 1: <input type="text" id="num1"></label>
+        <label>Operator: <input type="text" id="ope"</label>
+        <label>Enter number 2: <input type="text" id="num2"></label>
+        <label>Enter result: <input type="text" id="res"></label>
+        <label><button onclick="checkResult()">Check result</button></label>
+        <hr>
+        <p><span id="output"></span></p>
+    </main>
+    <script src="js/checkResult.js"></script>
+    <footer>
+        &copy;2021 &bull; Arnaldo Campos &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+</header>
+</body>
+</html>
