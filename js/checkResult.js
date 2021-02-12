@@ -1,27 +1,28 @@
 function checkResult(){
     let num1 = parseFloat(document.getElementById('num1').value);
-    let ope = document.getElementById('ope').value;
+    let operator = document.getElementById('operator').value;
     let num2 = parseFloat(document.getElementById('num2').value);
-    let res = parseFloat(document.getElementById('res').value);
-    
- switch (ope) {
-     case '+':
-         return num1 + num2
-        document.getElementById('output').textContent = "Correct! 🏆"
+    let userResult = parseFloat(document.getElementById('userResult').value);
+    let correctAnswer;
+ 
+    switch (operator) {
+       case '+':
+          correctAnswer = num1 + num2;
+          break;
+      case '-':
+         correctAnswer = num1 - num2;
          break;
-     case '-':
-        document.getElementById('output').textContent = "Correct! 🏆"
-        break;
-     case "*":
-        document.getElementById('output').textContent = "Correct! 🏆"
-        break;
-     case "/":
-        document.getElementById('output').textContent = "Correct! 🏆"
-        break; 
-     default:
-        document.getElementById('output').textContent = "Incorrect 😢"
+      case '*':
+         correctAnswer = num1 * num2;
          break;
- }   
-    
+      case '/':
+         correctAnswer = num1 / num2;
+         break;
+    }
 
+   if (userResult == correctAnswer) {
+      document.getElementById('output').innerHTML = "Correct! 🏆"
+  } else {
+      document.getElementById('output').innerHTML = "Incorrect! 😢"
+  }
 }

@@ -27,9 +27,16 @@ Validate-->
     <main>
         <h3>Enter the numbers, and select the arithmetic operator</h3>
         <label>Enter number 1: <input type="text" id="num1"></label>
-        <label>Operator: <input type="text" id="ope"</label>
+        <label for="operator">Select operator: </label>
+        <select id="operator" name="arithmeticOperator">
+            <option value="" selected disabled>Operator</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
         <label>Enter number 2: <input type="text" id="num2"></label>
-        <label>Enter result: <input type="text" id="res"></label>
+        <label>Enter result: <input type="text" id="userResult"></label>
         <label><button onclick="checkResult()">Check result</button></label>
         <hr>
         <p><span id="output"></span></p>
