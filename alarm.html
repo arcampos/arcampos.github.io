@@ -1,0 +1,72 @@
+<!--INSTRUCTIONS
+Write a program that determines if you can sleep in or not.
+Your programshould get all its input from your computer's clock.
+On all weekdays (Monday - Friday) that are not holidays, the program should output
+"Get up!" On all other days (weekends and holidays) the program should output
+"Sleep in." The hlidays the program must check for are January 1, July 4,
+and December 25.
+
+Within your program, use this JS code taht will get the current month, current
+day of the month, and current day of the week from your computer's clock:
+
+var now = new Date();
+var month = now.getMonth();
+var dayOfMonth = now.getDate();
+var dayOfWeek = now.getDay();
+
+If you use the above code, the variable month will hold 0 if the curent month
+is January, 1 if February, and so on to 11 if December. The variable dayOfMonth
+will hold 1 for the first day of the month u´to 28, 29, 30 or 31 for the last
+day of the month. The variable dayOfWeek will hold 0 if today is Sunday, 1 if
+today is Monday, and so on to 6 if today is Saturday.
+
+YOU MUST USE A COMPOUND CONDITION-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Week 7: Alarm</h1>
+        <h2>Arnaldo Campos</h2>
+    </header>
+    <main>
+        <h3>What I need to do today?</h3>
+        <label><button onclick="sleepOrWake()">Tell me</button></>
+        <hr>
+        <p><span id="output"></span></p>
+    </main>
+    <script>
+        function sleepOrWake() {
+        let now = new Date();
+        let month = now.getMonth;
+        let dayOfMonth = now.getDate();
+        let dayOfWeek = now.getDay();
+
+        if (dayOfMonth == 1 && month == 0) {
+          alarm = "Sleep In";
+        } 
+        else if (dayOfMonth == 4 && month == 6) {
+          alarm = "Sleep In";
+        } 
+        else if (dayOfMonth == 25 && month == 11) {
+          alarm = "Sleep In"; }
+        else if (dayOfWeek == 5 || dayOfWeek == 6) {
+          alarm = "Sleep In"; }
+        else {
+          alarm = "Get up!"; }
+
+        document.getElementById("output").innerHTML = "Today you have to " + alarm;
+    }
+    </script>
+    <footer>
+        &copy;2021 &bull; Arnaldo Campos &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+</body>
+</html>
