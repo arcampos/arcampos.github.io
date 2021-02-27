@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum uo odd numbers</title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Week 8: Sum up the odd values</h1>
+        <h2>Arnaldo Campos</h2>
+    </header>
+    <main>
+        <h3>Sum odd numbers</h3>
+        <label>Enter a number: <input type="text" id="number"></label>
+        <label><button onclick="sumOdd()">Sum</button></label>
+        <hr>
+        <p><span id="output"></span></p>
+    </main>
+    <footer>
+        &copy;2021 &bull; Arnaldo Campos &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        // input: The user enter a number.
+        // Process: The program select the odd numbers between 1 and the choose number.
+        // output: The program show the user a list of the odd numbers and the result of the sum of the odd numbers.
+        function sumOdd() {
+            const number = document.querySelector('#number').value;
+            let sum = 0;
+            let result = '';
+
+            for (let i=1; i<=number; i++){
+                if(i%2 !== 0){
+                    result = result + "Number: " + i + '<br>';
+                    sum = sum + i;
+                }
+            }
+          document.getElementById('output').innerHTML = result + 'Total odd numbers:' + sum;
+
+        }
+    </script>
+</body>
+</html>
