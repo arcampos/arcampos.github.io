@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Times table</title>
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <h1>Week 9: Times table using repetition</h1>
+        <h2>Arnaldo Campos</h2>
+    </header>
+    <main>
+        <h3>Multiplication table</h3>
+        <label>Enter a number: <input type="text" id="number"></label>
+        <label><button onclick="mult()">Calculate</button></label>
+        <hr>
+        <p><span id="output"></span></p>
+    </main>
+    <footer>
+        &copy;2021 &bull; Arnaldo Campos &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script type="text/javascript">
+        function mult(){
+            let t=parseInt(document.getElementById('number').value);
+            let i=1
+            while(i<=12)
+            {
+                document.write(t+ ' X ' +i+ ' = ' + i*t+ '<br>');
+                i++;
+            }
+        }
+    </script>
+    
+</body>
+</html>
