@@ -1,3 +1,6 @@
+// Input: The user introduce the requiere infomation about the loan.
+// Process: The program use the information provided from the user to calculate how much the user needs to pay monthly, and after that also the program calculate how much you payd durint the loan time.
+// output: The user receive the information about the monthly payment and how much the user paid.
 function doPayment() {
     let principal = parseFloat(document.getElementById('principal').value);
     let annualRate = parseFloat(document.getElementById('annualRate').value);

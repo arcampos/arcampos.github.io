@@ -1,3 +1,6 @@
+// input: the user introduce the requiere information about the investment.
+// process: The program calculate with the information provided by the user the future value of the investment.
+// output: The program display to the user the future value of the investment.
 function doFV () {
     let principal = parseFloat(document.getElementById('principal').value);
     let annualRate = parseFloat(document.getElementById('annualRate').value);
