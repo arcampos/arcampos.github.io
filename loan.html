@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan calculator</title>
+    <link href="css/style.css" rel="stylesheet" href="">
+</head>
+<body>
+    <header>
+        <h1>Week 11: Loan calculator</h1>
+        <h2>Arnaldo Campos</h2>
+    </header>
+    <main>
+        <h3>Loan calculator</h3>
+        <label>Amount Borrowed (principal) <input type="text" id="principal"></label>
+        <label>Annual interest rate (example: .065) <input type="text" id="annualRate"></label>
+        <label>Number of years <input type="text" id="numberOfYears"></label>
+        <label>Payments per year <input type="text" id="paymentsPerYear"></label>
+        <label><button onclick="doPayment()">Calculate payment</button></label>
+        <p><span id="payment"></span></p>
+        <hr>
+        <label>Number of payments paid to date <input type="text" id="numberOfPayments"></label>
+        <label><button onclick="doBalance()">Calculate payoff amount</button></label>
+        <p><span id="balance"></span></p>
+        <hr>
+    </main>
+    <footer>
+        &copy;2021 &bull; Arnaldo Campos &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script src="js/loan.js"></script>
+
+    
+</body>
+</html>
