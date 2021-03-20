@@ -8,7 +8,7 @@ function doPayment() {
     let paymentsPerYear = parseFloat(document.getElementById('paymentsPerYear').value);
     
     let payment = computePayment(principal, annualRate, numberOfYears, paymentsPerYear);
-    document.getElementById('payment').innerHTML = '$${payment.toFixed(2)}';
+    document.getElementById('pay').innerHTML = '$${payment.toFixed(2)}';
 }
 
 function doBalance() { 
